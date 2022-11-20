@@ -21,7 +21,7 @@ class AdminPostsController extends Controller
 
     public function store(Request $request)
     {
-        Post::created($request->all());
+        Post::create($request->all());
         return redirect()->route('admin.posts.index');
     }
 
@@ -38,8 +38,9 @@ class AdminPostsController extends Controller
         return redirect()->route('admin.posts.index');
     }
 
-    public function destroy($id)
+    public function destroy(Post $post)
     {
-        //
+        $post->delete();
+        return redirect()->route('admin.posts.index');
     }
 }

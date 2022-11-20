@@ -34,7 +34,7 @@
             </select>
         </div>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <a class="btn btn-primary btn-sm" href="#">儲存</a>
+            <button class="btn btn-primary btn-sm" type="submit">儲存</button>
         </div>
 
     </form>

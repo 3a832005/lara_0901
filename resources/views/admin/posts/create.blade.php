@@ -18,22 +18,22 @@
     <form action="{{ route('admin.posts.store') }}" method="POST" role="form">
         @method('POST')
         @csrf
-        <div class="mb-3">
+        <div class="form-group">
             <label for="title" class="form-label">標題:</label>
             <input id="title" name="title" class="form-control" value="{{ old('title') }}" placeholder="請輸入文章標題">
         </div>
-        <div class="mb-3">
+        <div class="form-group">
             <label for="content" class="form-label">內容:</label>
             <textarea id="content" name="content" class="form-control" rows="10"> {{ old('content') }}</textarea>
         </div>
-        <div class="mb-3">
+        <div class="form-group">
             <label for=" is_feature " class="form-label">精選？</label>
             <select id=" is_feature " name="is_feature" class="form-control">
                 <option value="0">否</option>
                 <option value="1">是</option>
             </select>
         </div>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <div class="text-right">
             <button class="btn btn-primary btn-sm" type="submit">儲存</button>
         </div>
 
